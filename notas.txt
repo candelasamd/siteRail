@@ -1,0 +1,14 @@
+rails new blog
+rails server
+
+rails generate scaffold Post title:string
+ rails db migrate
+rails c -> irb
+rails generate migration AddBodyToPost body:text  -> añadimos un atributo nuevo al objeto creado con scaffold
+
+a manita
+rails routes
+rails destroy controller PagesGontroller
+rails generate model Page title:string  body:text slug:string
++
+rails db:migrate
