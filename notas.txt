@@ -12,3 +12,6 @@ rails destroy controller PagesGontroller
 rails generate model Page title:string  body:text slug:string
 +
 rails db:migrate
+
+Navegador:
+http://localhost:3000/rails/info/routes

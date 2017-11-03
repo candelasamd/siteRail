@@ -1,5 +1,8 @@
 <h1>Vista Index de Pages</h1>
-<p>The current time is <%=Time.now%></p>
+
+
+
+
 <table>
 <thead>
   <tr>
@@ -10,13 +13,31 @@
 </thead>
 
 <tbody>
-  <% @pages.each do |page| %>
+<!   en consola
+    pages=Page.all
+    pages.each {|page| puts page.title} >
+
+    <% @pages.each do |page| %>
     <tr>
-      <td><%= page.title %></td>
+      <td><%= link_to page.title, "pages/#{page.id}" %></td>
       <td><%= page.body %></td>
       <td><%= page.slug %></td>
-      
     </tr>
+
   <% end %>
 </tbody>
 </table>
+
+<p> <%= link_to 'Nueva página', new_page_path %> </p> 
+
+<p> ------------------------------------ </p>
+<p>The current time is <%=Time.now%></p>
+
+<% nota=95 %>
+<% if nota>60 %>
+    Aprobado!!!!
+<% end %>
+
+<% 4.times do |index| %>
+    <p><%= index %> Perro</p>
+<% end %>
